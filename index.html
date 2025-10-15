@@ -9,7 +9,7 @@
   <style>
     /* Simple custom styles */
     :root { --accent: #f6c246; --bg: #0b0b0c; --card:#121214; --muted:#9aa0a6; }
-    [data-theme="light"] { --bg:#f8fafc; --card:#ffffff; --muted:#6b7280; --accent:#b45309; color: #111827; }
+    /* REMOVIDO: [data-theme="light"] */ /* Não é mais necessário se o tema é fixo */
     body { background: linear-gradient(180deg, rgba(0,0,0,0.6), rgba(0,0,0,0.6)), var(--bg); color: white; }
     .card { background: var(--card); }
     .accent { color: var(--accent); }
@@ -28,6 +28,39 @@
     /* Adicione estilo para as estrelas, se quiser */
     .star-rating { display: inline-block; color: var(--accent); }
     .star-rating span { font-size: 1.2em; }
+
+    /* NOVO: Estilo para a imagem de fundo na seção Home */
+    .home-bg-image {
+      position: absolute;
+      bottom: 0; /* Alinha a imagem à parte inferior da div */
+      right: 0;
+      width: 100%;
+      height: 100%; /* Ajusta conforme necessário, pode ser `auto` */
+      background-image: url('home.png');
+      background-size: contain; /* Garante que a imagem caiba sem cortar */
+      background-repeat: no-repeat;
+      background-position: bottom right; /* Posição no canto inferior direito */
+      opacity: 0.1; /* Translucidez */
+      z-index: -1; /* Fica atrás do conteúdo */
+      filter: grayscale(100%); /* Opcional: para harmonizar com o tema escuro */
+      pointer-events: none; /* Garante que não interfira com cliques no texto */
+    }
+
+    /* Em telas maiores (md), a imagem volta a ser um item separado na grid */
+    @media (min-width: 768px) {
+      .home-bg-image {
+        position: relative; /* Remove o posicionamento absoluto */
+        height: 100%; /* Ajusta a altura novamente */
+        width: 100%;
+        background-image: none; /* Remove a imagem de background */
+        opacity: 1; /* Remove a opacidade */
+        filter: none; /* Remove o grayscale */
+        display: block; /* Garante que seja visível */
+      }
+      .home-bg-image img {
+        display: block; /* Mostra a imagem dentro do div */
+      }
+    }
   </style>
 </head>
 <body class="antialiased" id="page-root">
@@ -51,8 +84,7 @@
         <a href="#portfolio" class="hover:underline">Portfólio</a>
         <a href="#depoimentos" class="hover:underline">Depoimentos</a>
         <a href="#contato" class="hover:underline">Contato</a>
-        <button id="theme-toggle" title="Alternar tema" class="ml-2 p-2 arrow-btn" aria-label="Alternar tema">🌗</button>
-      </nav>
+        </nav>
 
       <div class="md:hidden">
         <button id="mobile-open" class="p-2 arrow-btn">☰</button>
@@ -62,8 +94,7 @@
 
   <main class="pt-24">
 
-    <section id="home" class="w-full px-4 py-16 grid md:grid-cols-2 gap-8 items-center">
-      <div>
+    <section id="home" class="w-full px-4 py-16 grid md:grid-cols-2 gap-8 items-center relative"> <div>
         <h1 class="text-4xl md:text-5xl font-extrabold leading-tight accent">Instalação segura para sua casa ou negócio ⚡</h1>
         <p class="mt-4 text-gray-300">Desde 2014 levando confiança e qualidade em serviços elétricos residenciais e comerciais no Rio de Janeiro.</p>
         <div class="mt-6 flex items-center space-x-4">
@@ -83,9 +114,8 @@
         </div>
       </div>
 
-      <div class="rounded overflow-hidden shadow-lg">
-        <img src="home.png" alt="Preview NM Soluções Elétricas" class="w-full object-cover h-72 md:h-96"/>
-      </div>
+      <div class="rounded overflow-hidden shadow-lg home-bg-image">
+        <img src="home.png" alt="Preview NM Soluções Elétricas" class="w-full object-cover h-72 md:h-96 hidden md:block"/> </div>
     </section>
 
     <section id="sobre" class="w-full px-4 py-12">
@@ -198,16 +228,16 @@
   </div>
 
 <script>
-  // Theme toggle (persist in localStorage)
-  const themeToggle = document.getElementById('theme-toggle');
-  const root = document.documentElement;
-  function applyTheme(t){ document.documentElement.setAttribute('data-theme', t); localStorage.setItem('nm_theme', t); }
-  const saved = localStorage.getItem('nm_theme') || 'dark';
-  applyTheme(saved);
-  themeToggle.addEventListener('click', ()=> {
-    const cur = document.documentElement.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
-    applyTheme(cur);
-  });
+  // REMOVIDO: Theme toggle (persist in localStorage)
+  // const themeToggle = document.getElementById('theme-toggle');
+  // const root = document.documentElement;
+  // function applyTheme(t){ document.documentElement.setAttribute('data-theme', t); localStorage.setItem('nm_theme', t); }
+  // const saved = localStorage.getItem('nm_theme') || 'dark';
+  // applyTheme(saved);
+  // themeToggle.addEventListener('click', ()=> {
+  //   const cur = document.documentElement.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+  //   applyTheme(cur);
+  // });
 
   // Services carousel arrows
   const scrollWrapServ = document.querySelector('.hc-scroll');
