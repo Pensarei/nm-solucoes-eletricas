@@ -3,20 +3,27 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>NM Soluções Elétricas | Eletricista no Rio de Janeiro</title>
-  <meta name="description" content="NM Soluções Elétricas - Serviços elétricos residenciais e comerciais no Rio de Janeiro. Eletrotécnico Marlon dos Santos. Desde 2014." />
+  
+  <title>NM Soluções Elétricas - Eletricista no Rio de Janeiro | Instalações e Manutenção RJ</title>
+  
+  <meta name="description" content="Eletricista no Rio de Janeiro (RJ) para instalações, manutenção e projetos elétricos residenciais e comerciais. Conte com a segurança e experiência da NM Soluções Elétricas. Orçamento grátis." />
+  
+  <meta property="og:title" content="Eletricista no Rio de Janeiro | NM Soluções Elétricas - Serviços Elétricos RJ" />
+  <meta property="og:description" content="Eletricista no Rio de Janeiro (RJ) para instalações, manutenção e projetos elétricos residenciais e comerciais. Conte com a segurança e experiência da NM Soluções Elétricas. Orçamento grátis." />
+  <meta property="og:image" content="https://pensarei.github.io/nm-solucoes-eletricas/home.png" /> <meta property="og:url" content="https://pensarei.github.io/nm-solucoes-eletricas/" /> <meta property="og:type" content="website" />
+  <meta property="og:locale" content="pt_BR" />
+
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <style>
     /* Simple custom styles */
     :root { --accent: #f6c246; --bg: #0b0b0c; --card:#121214; --muted:#9aa0a6; }
-    /* REMOVIDO: [data-theme="light"] */ /* Não é mais necessário se o tema é fixo */
     body { background: linear-gradient(180deg, rgba(0,0,0,0.6), rgba(0,0,0,0.6)), var(--bg); color: white; }
     .card { background: var(--card); }
     .accent { color: var(--accent); }
     .btn-accent { background: var(--accent); color: #111827; }
     /* Horizontal carousel for services */
     .hc-scroll { overflow-x:auto; scroll-behavior:smooth; -webkit-overflow-scrolling: touch; }
-    .hc-item { min-width: 280px; flex: 0 0 auto; } 
+    .hc-item { width: 280px; flex: 0 0 auto; }
     /* Simple arrows */
     .arrow-btn { background: rgba(255,255,255,0.04); border-radius:9999px; width:40px; height:40px; display:flex; align-items:center; justify-content:center; }
     /* Testimonials */
@@ -29,41 +36,98 @@
     .star-rating { display: inline-block; color: var(--accent); }
     .star-rating span { font-size: 1.2em; }
 
-    /* NOVO: Estilo para a imagem de fundo na seção Home */
+    /* Estilo para a imagem de fundo na seção Home */
     .home-bg-image {
       position: absolute;
-      bottom: 0; /* Alinha a imagem à parte inferior da div */
+      bottom: 0; 
       right: 0;
       width: 100%;
-      height: 100%; /* Ajusta conforme necessário, pode ser `auto` */
+      height: 100%;
       background-image: url('home.png');
-      background-size: contain; /* Garante que a imagem caiba sem cortar */
+      background-size: contain; 
       background-repeat: no-repeat;
-      background-position: bottom right; /* Posição no canto inferior direito */
-      opacity: 0.7; /* Translucidez */
-      z-index: -1; /* Fica atrás do conteúdo */
-      filter: grayscale(100%); /* Opcional: para harmonizar com o tema escuro */
-      pointer-events: none; /* Garante que não interfira com cliques no texto */
+      background-position: bottom right; 
+      opacity: 0.7; /* Opacidade ajustada */
+      z-index: -1; 
+      filter: grayscale(100%); 
+      pointer-events: none; 
     }
 
     /* Em telas maiores (md), a imagem volta a ser um item separado na grid */
     @media (min-width: 768px) {
       .home-bg-image {
-        position: relative; /* Remove o posicionamento absoluto */
-        height: 100%; /* Ajusta a altura novamente */
+        position: relative; 
+        height: 100%; 
         width: 100%;
-        background-image: none; /* Remove a imagem de background */
-        opacity: 1; /* Remove a opacidade */
-        filter: none; /* Remove o grayscale */
-        display: block; /* Garante que seja visível */
+        background-image: none; 
+        opacity: 1; 
+        filter: none; 
+        display: block; 
       }
       .home-bg-image img {
-        display: block; /* Mostra a imagem dentro do div */
+        display: block; 
       }
     }
+    
+     /* Estilo para o menu mobile (transição) */
+    .mobile-menu {
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in-out;
+    }
+    .mobile-menu.open {
+        transform: translateX(0);
+    }
+
+    /* Estilo para o fundo do menu mobile */
+    #mobile-menu {
+      background-color: rgba(18, 18, 20, 0.95); /* Cor dos cards com 95% de opacidade */
+    }
   </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Electrician",
+    "name": "NM Soluções Elétricas",
+    "description": "Eletricista profissional no Rio de Janeiro para instalações, manutenção e projetos elétricos residenciais e comerciais. Conte com segurança, qualidade e orçamento grátis.",
+    "telephone": "+5521964675661",
+    "url": "https://pensarei.github.io/nm-solucoes-eletricas/", "image": "https://pensarei.github.io/nm-solucoes-eletricas/home.png", "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Rio de Janeiro",
+      "addressRegion": "RJ",
+      "addressCountry": "BR"
+    },
+    "areaServed": {
+      "@type": "State",
+      "name": "Rio de Janeiro"
+    },
+    "openingHours": "Mo-Fr 08:00-17:00",
+    "hasMap": "https://www.google.com/maps/search/?api=1&query=eletricista+rio+de+janeiro", "sameAs": [
+      "https://wa.me/5521964675661",
+      "URL_SUAS_REDES_SOCIAL_AQUI" ]
+  }
+  </script>
 </head>
 <body class="antialiased" id="page-root">
+
+  <aside id="mobile-menu" class="mobile-menu fixed top-0 right-0 w-64 h-full bg-black card shadow-lg z-50 p-6 flex flex-col space-y-4 md:hidden">
+    <div class="flex justify-end">
+      <button id="mobile-close" class="p-2 arrow-btn text-xl">✕</button>
+    </div>
+    
+    <a href="#home" class="text-xl font-semibold hover:accent" onclick="closeMobileMenu()">Home</a>
+    <a href="#sobre" class="text-xl font-semibold hover:accent" onclick="closeMobileMenu()">Sobre</a>
+    <a href="#servicos" class="text-xl font-semibold hover:accent" onclick="closeMobileMenu()">Serviços</a>
+    <a href="#portfolio" class="text-xl font-semibold hover:accent" onclick="closeMobileMenu()">Portfólio</a>
+    <a href="#depoimentos" class="text-xl font-semibold hover:accent" onclick="closeMobileMenu()">Depoimentos</a>
+    <a href="#contato" class="text-xl font-semibold hover:accent" onclick="closeMobileMenu()">Contato</a>
+    
+    <div class="pt-6">
+      <a class="btn-accent px-5 py-2 rounded shadow font-semibold w-full text-center block" href="https://wa.me/5521964675661?text=Ol%C3%A1%2C%20gostaria%20de%20um%20or%C3%A7amento%20para%20meu%20imovel.">Chamar no WhatsApp</a>
+    </div>
+  </aside>
+
+  <div id="menu-overlay" class="fixed inset-0 bg-black bg-opacity-50 z-40 hidden md:hidden" onclick="closeMobileMenu()"></div>
 
   <header class="w-full fixed top-0 left-0 z-40">
     <div class="max-w-5xl mx-auto px-4 py-3 flex items-center justify-between">
@@ -72,33 +136,34 @@
           <span class="font-bold accent">NM</span>
         </div>
         <div>
-          <a href="#home" class="text-sm font-semibold">NM Soluções Elétricas</a>
+          <a href="#home" class="text-xl font-semibold">NM Soluções Elétricas</a>
           <div class="text-xs text-gray-400">Eletrotécnico Marlon dos Santos</div>
         </div>
       </div>
 
-      <nav class="hidden md:flex items-center space-x-6 text-sm">
+      <nav class="hidden md:flex items-center space-x-6 text-lg">
         <a href="#home" class="hover:underline">Home</a>
         <a href="#sobre" class="hover:underline">Sobre</a>
         <a href="#servicos" class="hover:underline">Serviços</a>
         <a href="#portfolio" class="hover:underline">Portfólio</a>
         <a href="#depoimentos" class="hover:underline">Depoimentos</a>
         <a href="#contato" class="hover:underline">Contato</a>
-        </nav>
+      </nav>
 
       <div class="md:hidden">
-        <button id="mobile-open" class="p-2 arrow-btn">☰</button>
+        <button id="mobile-open" class="p-3 arrow-btn">☰</button>
       </div>
     </div>
   </header>
 
   <main class="pt-24">
 
-    <section id="home" class="w-full px-4 py-16 grid md:grid-cols-2 gap-8 items-center relative"> <div>
+    <section id="home" class="w-full px-4 py-16 grid md:grid-cols-2 gap-8 items-center relative"> 
+      <div>
         <h1 class="text-4xl md:text-5xl font-extrabold leading-tight accent">Instalação segura para sua casa ou negócio ⚡</h1>
-        <p class="mt-4 text-gray-300">Desde 2014 levando confiança e qualidade em serviços elétricos residenciais e comerciais no Rio de Janeiro.</p>
+        <p class="mt-4 text-gray-300">A <strong>NM Soluções Elétricas</strong> oferece serviços de <strong>eletricista no Rio de Janeiro</strong>, garantindo instalações elétricas seguras, manutenção preventiva e projetos eficientes para residências e comércios. Conte com a experiência desde 2014 para soluções de qualidade em todo o RJ.</p>
         <div class="mt-6 flex items-center space-x-4">
-          <a class="btn-accent px-5 py-3 rounded shadow font-semibold" href="https://wa.me/5521964675661?text=Ol%C3%A1%2C%20gostaria%20de%20um%20or%C3%A7amento%20para%20meu%C3%B3vel.">Chamar no WhatsApp</a>
+          <a class="btn-accent px-5 py-3 rounded shadow font-semibold" href="https://wa.me/5521964675661?text=Ol%C3%A1%2C%20gostaria%20de%20um%20or%C3%A7amento%20para%20meu%20im%C3%B3vel.">Chamar no WhatsApp</a>
           <div class="text-sm text-gray-400">Seg a Sex: 8h às 17h</div>
         </div>
 
@@ -115,13 +180,14 @@
       </div>
 
       <div class="rounded overflow-hidden shadow-lg home-bg-image">
-        <img src="home.png" alt="Preview NM Soluções Elétricas" class="w-full object-cover h-72 md:h-96 hidden md:block"/> </div>
+        <img src="home.png" alt="Painel elétrico moderno instalado pela NM Soluções Elétricas no Rio de Janeiro - Segurança e qualidade em serviços de eletricista." class="w-full object-cover h-72 md:h-96 hidden md:block"/> 
+      </div>
     </section>
 
     <section id="sobre" class="w-full px-4 py-12">
       <div class="card p-8 rounded">
-        <h2 class="text-2xl font-bold">Quem Somos</h2>
-        <p class="mt-3 text-gray-300">A <strong>NM Soluções Elétricas</strong>, comandada pelo eletrotécnico <strong>Marlon dos Santos</strong>, atua desde 2014 oferecendo soluções elétricas residenciais e comerciais no Rio de Janeiro. Priorizamos segurança, qualidade e atendimento rápido.</p>
+        <h2 class="text-2xl font-bold">Quem Somos: Eletricista com Experiência no Rio de Janeiro</h2>
+        <p class="mt-3 text-gray-300">A <strong>NM Soluções Elétricas</strong>, comandada pelo experiente eletrotécnico <strong>Marlon dos Santos</strong>, é a sua escolha confiável para <strong>serviços elétricos no Rio de Janeiro</strong>. Desde 2014, atuamos com dedicação em <strong>instalações elétricas residenciais e comerciais</strong>, garantindo soluções seguras e eficientes em toda a cidade do RJ. Nosso compromisso é com a qualidade, a segurança das suas instalações e um <a href="#contato" class="underline">atendimento rápido e transparente</a>. Se você busca um <strong class="accent">eletricista qualificado no Rio de Janeiro</strong>, conte com a NM Soluções Elétricas.</p>
         <div class="mt-6 grid grid-cols-2 md:grid-cols-4 gap-4">
           <div class="p-4 card rounded text-center">
             <div class="text-xl">🎓</div>
@@ -144,28 +210,40 @@
     </section>
 
     <section id="servicos" class="w-full mx-auto px-4 py-12">
-      <h2 class="text-2xl font-bold mb-4">Nossos Serviços</h2>
+      <h2 class="text-2xl font-bold mb-4">Nossos Serviços Elétricos no Rio de Janeiro</h2>
       <div class="relative">
         <button id="prev-serv" class="absolute left-0 top-1/2 transform -translate-y-1/2 hidden md:flex arrow-btn z-30">◀</button>
         <div class="hc-scroll flex space-x-4 px-12 md:px-6 pb-4">
-          <div class="hc-item card rounded p-6">
-            <h3 class="font-bold text-lg">🔌 Instalações elétricas</h3>
-            <p class="mt-2 text-gray-300">Tomadas, fiação, iluminação e disjuntores.</p>
+          
+          <div class="hc-item card rounded p-6 flex flex-col justify-between">
+            <div>
+              <h3 class="font-bold text-lg">🔌 Instalações elétricas</h3>
+              <p class="mt-2 text-gray-300">Realizamos instalações de tomadas, fiação, iluminação e disjuntores com total segurança no RJ.</p>
+            </div>
             <button class="mt-4 btn-accent px-4 py-2 rounded" onclick="openWA('Instalações elétricas')">Pedir orçamento</button>
           </div>
-          <div class="hc-item card rounded p-6">
-            <h3 class="font-bold text-lg">🧰 Manutenção elétrica</h3>
-            <p class="mt-2 text-gray-300">Reparo e diagnóstico de falhas elétricas.</p>
+
+          <div class="hc-item card rounded p-6 flex flex-col justify-between">
+            <div>
+              <h3 class="font-bold text-lg">🧰 Manutenção elétrica</h3>
+              <p class="mt-2 text-gray-300">Serviços de reparo e diagnóstico de falhas elétricas para sua casa ou empresa no Rio de Janeiro.</p>
+            </div>
             <button class="mt-4 btn-accent px-4 py-2 rounded" onclick="openWA('Manutenção elétrica')">Pedir orçamento</button>
           </div>
-          <div class="hc-item card rounded p-6">
-            <h3 class="font-bold text-lg">💡 Iluminação LED</h3>
-            <p class="mt-2 text-gray-300">Projetos modernos e econômicos.</p>
+
+          <div class="hc-item card rounded p-6 flex flex-col justify-between">
+            <div>
+              <h3 class="font-bold text-lg">💡 Iluminação LED</h3>
+              <p class="mt-2 text-gray-300">Projetos de iluminação LED modernos e econômicos para residências e comércios cariocas.</p>
+            </div>
             <button class="mt-4 btn-accent px-4 py-2 rounded" onclick="openWA('Iluminação LED')">Pedir orçamento</button>
           </div>
-          <div class="hc-item card rounded p-6">
-            <h3 class="font-bold text-lg">⚡ Adequações e melhorias</h3>
-            <p class="mt-2 text-gray-300">Atualização de sistemas elétricos residenciais e comerciais.</p>
+
+          <div class="hc-item card rounded p-6 flex flex-col justify-between">
+            <div>
+              <h3 class="font-bold text-lg">⚡ Adequações e melhorias</h3>
+              <p class="mt-2 text-gray-300">Atualização de sistemas elétricos para segurança e eficiência em imóveis no RJ.</p>
+            </div>
             <button class="mt-4 btn-accent px-4 py-2 rounded" onclick="openWA('Adequações e melhorias')">Pedir orçamento</button>
           </div>
         </div>
@@ -174,7 +252,7 @@
     </section>
 
     <section id="portfolio" class="w-full mx-auto px-4 py-12">
-      <h2 class="text-2xl font-bold mb-6">Portfólio</h2>
+      <h2 class="text-2xl font-bold mb-6">Portfólio de Serviços Elétricos Realizados no RJ</h2>
       <div class="relative">
         <button id="prev-port" class="absolute left-0 top-1/2 transform -translate-y-1/2 hidden md:flex arrow-btn z-30">◀</button>
         
@@ -186,7 +264,7 @@
     </section>
 
     <section id="depoimentos" class="w-full mx-auto px-4 py-12">
-      <h2 class="text-2xl font-bold mb-6">Depoimentos</h2>
+      <h2 class="text-2xl font-bold mb-6">Depoimentos de Clientes Satisfeitos no Rio de Janeiro</h2>
       <div id="testi-wrap" class="card p-6 rounded">
         <div id="testi-list" class="relative overflow-hidden">
           </div>
@@ -197,22 +275,41 @@
       <div class="card p-8 rounded">
         <div class="grid md:grid-cols-2 gap-6">
           <div>
-            <h3 class="text-xl font-bold">Contato</h3>
-            <p class="mt-2">NM Soluções Elétricas<br/>Eletrotécnico Marlon dos Santos<br/>Rio de Janeiro — RJ</p>
+            <h3 class="text-xl font-bold">Entre em Contato com seu Eletricista no Rio</h3>
+            <p class="mt-2"><strong>NM Soluções Elétricas</strong><br/>Eletrotécnico Marlon dos Santos<br/>Atendimento em todo o Rio de Janeiro — RJ</p>
             <p class="mt-4">📞 <a class="underline" href="https://wa.me/5521964675661">21 96467-5661</a></p>
             <p class="mt-2 text-sm text-gray-400">Seg a Sex: 8h às 17h</p>
           </div>
+          
           <div>
-            <h3 class="text-xl font-bold">Localização</h3>
-            <p class="mt-2 text-gray-300">Atendemos residências e comércios em toda a cidade do Rio de Janeiro.</p>
+            <h3 class="text-xl font-bold">Localização e Área de Atendimento</h3>
+            
+            <p class="mt-2 text-gray-300">
+                Nosso serviço de <strong>instalações e reparos elétricos</strong> é realizado em <strong>todo o município do Rio de Janeiro</strong>, atendendo a residências e comércios em todas as grandes regiões da cidade: <strong>Zona Sul, Zona Oeste, Zona Norte e Zona Central.</strong>
+            </p>
+
+            <p class="mt-2 text-gray-300">
+                Temos forte atuação e ampla disponibilidade nos seguintes bairros:
+            </p>
+
+            <ul class="list-disc ml-6 mt-2 text-gray-300">
+                <li><strong>Zona Sul:</strong> Copacabana, Ipanema e Botafogo.</li>
+                <li><strong>Zona Oeste:</strong> Barra da Tijuca e Recreio dos Bandeirantes.</li>
+                <li><strong>Grande Tijuca/Zona Norte:</strong> Tijuca.</li>
+            </ul>
+
+            <p class="mt-2 text-gray-300 text-sm">
+                Entre em contato e solicite um orçamento. Nossa cobertura é total na cidade do Rio de Janeiro!
+            </p>
+
             <div class="mt-4 card rounded p-2">
               <div class="w-full h-48 flex items-center justify-center text-gray-500">Mapa integrado (Google Maps)</div>
             </div>
           </div>
-        </div>
+          </div>
 
         <div class="mt-8 text-center text-sm text-gray-400">
-          © 2025 NM Soluções Elétricas — Todos os direitos reservados
+          © 2025 NM Soluções Elétricas — Todos os direitos reservados. Eletricista no Rio de Janeiro.
         </div>
       </div>
     </footer>
@@ -228,36 +325,54 @@
   </div>
 
 <script>
-  // REMOVIDO: Theme toggle (persist in localStorage)
-  // const themeToggle = document.getElementById('theme-toggle');
-  // const root = document.documentElement;
-  // function applyTheme(t){ document.documentElement.setAttribute('data-theme', t); localStorage.setItem('nm_theme', t); }
-  // const saved = localStorage.getItem('nm_theme') || 'dark';
-  // applyTheme(saved);
-  // themeToggle.addEventListener('click', ()=> {
-  //   const cur = document.documentElement.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
-  //   applyTheme(cur);
-  // });
+document.addEventListener('DOMContentLoaded', function() {
+  
+  // NOVO: Seleciona os elementos do menu mobile
+  const mobileMenu = document.getElementById('mobile-menu');
+  const mobileOpenBtn = document.getElementById('mobile-open');
+  const mobileCloseBtn = document.getElementById('mobile-close');
+  const menuOverlay = document.getElementById('menu-overlay');
 
-  // Services carousel arrows
-  const scrollWrapServ = document.querySelector('.hc-scroll');
-  document.getElementById('prev-serv').addEventListener('click', ()=> {
-    scrollWrapServ.scrollBy({left:-300, behavior:'smooth'});
-  });
-  document.getElementById('next-serv').addEventListener('click', ()=> {
-    scrollWrapServ.scrollBy({left:300, behavior:'smooth'});
-  });
-
-  // Open WhatsApp with a prefilled subject
-  function openWA(service){
-    const msg = encodeURIComponent("Olá, gostaria de um orçamento para: " + service);
-    window.open("https://wa.me/5521964675661?text=" + msg, "_blank");
+  // NOVO: Função para abrir o menu
+  function openMobileMenu() {
+    mobileMenu.classList.add('open');
+    menuOverlay.classList.remove('hidden');
+    document.body.style.overflow = 'hidden'; // Evita rolagem no corpo
   }
 
-  // Basic mobile menu (optional)
-  document.getElementById('mobile-open').addEventListener('click', ()=> {
-    alert('Menu mobile: utilize o menu superior para navegar (em breve: menu mobile).');
-  });
+  // NOVO: Função para fechar o menu
+  function closeMobileMenu() {
+    mobileMenu.classList.remove('open');
+    menuOverlay.classList.add('hidden');
+    document.body.style.overflow = 'auto'; // Restaura a rolagem
+  }
+
+  // NOVO: Adiciona os listeners de evento
+  if (mobileOpenBtn) mobileOpenBtn.addEventListener('click', openMobileMenu);
+  if (mobileCloseBtn) mobileCloseBtn.addEventListener('click', closeMobileMenu);
+  // O overlay também fecha o menu (configurado no HTML)
+
+  // Services carousel arrows
+  const scrollWrapServ = document.querySelector('#servicos .hc-scroll'); // Seletor mais específico
+  const prevServBtn = document.getElementById('prev-serv');
+  const nextServBtn = document.getElementById('next-serv');
+
+  if (prevServBtn && scrollWrapServ) {
+    prevServBtn.addEventListener('click', ()=> {
+      scrollWrapServ.scrollBy({left:-300, behavior:'smooth'});
+    });
+  }
+  if (nextServBtn && scrollWrapServ) {
+    nextServBtn.addEventListener('click', ()=> {
+      scrollWrapServ.scrollBy({left:300, behavior:'smooth'});
+    });
+  }
+
+  // FUNÇÃO openWA MOVIDA PARA O LOCAL CORRETO E ATUALIZADA
+  window.openWA = function(service){
+    const msg = encodeURIComponent("Olá, gostaria de solicitar um orçamento para o serviço de: " + service);
+    window.open("https://wa.me/5521964675661?text=" + msg, "_blank");
+  }
 
   // --- SCRIPT PARA O PORTFÓLIO DINÂMICO (COM SUPORTE A VÍDEOS) ---
 
@@ -285,6 +400,8 @@
   }
 
   async function loadPortfolioImages() {
+    if (!portfolioCarousel) return; // Garante que o elemento existe
+    
     try {
       const response = await fetch(portfolioTextFile);
       if (!response.ok) {
@@ -305,13 +422,15 @@
         }
 
         serviceName = capitalizeWords(serviceName);
+        // SEO Otimizado: Adiciona "Serviços Elétricos -" aos alt texts do portfólio
         location = capitalizeWords(location);
 
         let mediaTag;
         if (isVideo(itemFileName)) {
           mediaTag = `<video src="${portfolioImagePath}${itemFileName}" autoplay loop muted playsinline class="w-full h-48 object-cover rounded"></video>`;
         } else {
-          mediaTag = `<img src="${portfolioImagePath}${itemFileName}" alt="${serviceName} em ${location}" class="w-full h-48 object-cover rounded"/>`;
+          // SEO Otimizado: alt tag mais descritiva
+          mediaTag = `<img src="${portfolioImagePath}${itemFileName}" alt="Serviços Elétricos - ${serviceName} em ${location} - Eletricista RJ" class="w-full h-48 object-cover rounded"/>`;
         }
 
         const portfolioItemHTML = `
@@ -334,23 +453,28 @@
   loadPortfolioImages();
 
   const scrollWrapPort = document.getElementById('portfolio-carousel');
-  document.getElementById('prev-port').addEventListener('click', ()=> {
-    scrollWrapPort.scrollBy({left:-300, behavior:'smooth'});
-  });
-  document.getElementById('next-port').addEventListener('click', ()=> {
-    scrollWrapPort.scrollBy({left:300, behavior:'smooth'});
-  });
+  const prevPortBtn = document.getElementById('prev-port');
+  const nextPortBtn = document.getElementById('next-port');
+  
+  if (prevPortBtn && scrollWrapPort) {
+    prevPortBtn.addEventListener('click', ()=> {
+      scrollWrapPort.scrollBy({left:-300, behavior:'smooth'});
+    });
+  }
+  if (nextPortBtn && scrollWrapPort) {
+    nextPortBtn.addEventListener('click', ()=> {
+      scrollWrapPort.scrollBy({left:300, behavior:'smooth'});
+    });
+  }
+
 
   // --- SCRIPT PARA DEPOIMENTOS DINÂMICOS (CARREGADOS DE UM ARQUIVO TXT) ---
 
   const testiList = document.getElementById('testi-list');
-  const testimonialsTextFile = './testimonials.txt'; // NOVO: Caminho para o arquivo de texto de depoimentos
+  const testimonialsTextFile = './testimonials.txt'; 
 
   // Função para renderizar um depoimento
   function renderTestimonial(testimonial) {
-    // Aqui não teremos estrelas ou data automaticamente, a menos que você as inclua no TXT
-    // Se o formato fosse "Texto-Autor-Rating", poderíamos parsear o rating
-    // Por enquanto, vamos manter simples como "Texto-Autor"
     return `
       <div class="testimonial">
         <p class="text-gray-300">"${testimonial.text}"</p>
@@ -363,6 +487,8 @@
 
   // Função para carregar depoimentos do arquivo de texto
   async function loadTestimonialsFromTextFile() {
+    if (!testiList) return; // Garante que o elemento existe
+    
     try {
       const response = await fetch(testimonialsTextFile);
       if (!response.ok) {
@@ -407,7 +533,7 @@
     const newTestiEls = document.querySelectorAll('#testi-list .testimonial');
     if (newTestiEls.length === 0) {
       if (testiInterval) clearInterval(testiInterval);
-      testiList.innerHTML = `<p class="text-gray-400">Nenhum depoimento disponível no momento.</p>`;
+      if (testiList) testiList.innerHTML = `<p class="text-gray-400">Nenhum depoimento disponível no momento.</p>`;
       return; 
     }
 
@@ -435,6 +561,8 @@
 
   // Chama a função para carregar os depoimentos quando a página carregar
   loadTestimonialsFromTextFile(); 
+
+}); // Fim do DOMContentLoaded
 </script>
 
 </body>
