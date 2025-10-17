@@ -7,603 +7,599 @@
     <title>NM Soluções Elétricas - Eletricista no Rio de Janeiro | Instalações e Manutenção RJ</title>
     
     <meta name="description" content="Eletricista no Rio de Janeiro (RJ) para instalações, manutenção e projetos elétricos residenciais e comerciais. Conte com a segurança e experiência da NM Soluções Elétricas. Orçamento grátis." />
-    
-    <meta property="og:title" content="Eletricista no Rio de Janeiro | NM Soluções Elétricas - Serviços Elétricos RJ" />
-    <meta property="og:description" content="Eletricista no Rio de Janeiro (RJ) para instalações, manutenção e projetos elétricos residenciais e comerciais. Conte com a segurança e experiência da NM Soluções Elétricas. Orçamento grátis." />
-    <meta property="og:image" content="https://pensarei.github.io/nm-solucoes-eletricas/home.png" /> 
-    <meta property="og:url" content="https://pensarei.github.io/nm-solucoes-eletricas/" /> 
-    <meta property="og:type" content="website" />
-    <meta property="og:locale" content="pt_BR" />
+    <!doctype html>
+    <html lang="pt-BR">
+    <head>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <title>NM Soluções Elétricas - Eletricista no Rio de Janeiro | Instalações e Manutenção RJ</title>
+      <meta name="description" content="Eletricista no Rio de Janeiro (RJ) para instalações, manutenção e projetos elétricos residenciais e comerciais. Conte com a segurança e experiência da NM Soluções Elétricas. Orçamento grátis." />
 
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <style>
-        /* Simple custom styles */
+      <link rel="canonical" href="https://pensarei.github.io/nm-solucoes-eletricas/" />
+      <link rel="icon" type="image/png" href="hero-preview.png" />
+
+      <meta property="og:title" content="Eletricista no Rio de Janeiro | NM Soluções Elétricas - Serviços Elétricos RJ" />
+      <meta property="og:description" content="Eletricista no Rio de Janeiro (RJ) para instalações, manutenção e projetos elétricos residenciais e comerciais. Conte com a segurança e experiência da NM Soluções Elétricas. Orçamento grátis." />
+      <meta property="og:image" content="https://pensarei.github.io/nm-solucoes-eletricas/home.png" />
+      <meta property="og:url" content="https://pensarei.github.io/nm-solucoes-eletricas/" />
+      <meta property="og:type" content="website" />
+      <meta property="og:locale" content="pt_BR" />
+
+      <!-- Fontes profissionais -->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+      <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+      <style>
         :root { --accent: #f6c246; --bg: #0b0b0c; --card:#121214; --muted:#9aa0a6; }
-        body { background: linear-gradient(180deg, rgba(0,0,0,0.6), rgba(0,0,0,0.6)), var(--bg); color: white; }
+        body { background: linear-gradient(180deg, rgba(0,0,0,0.6), rgba(0,0,0,0.6)), var(--bg); color: white; font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, 'Apple Color Emoji', 'Segoe UI Emoji'; }
         .card { background: var(--card); }
         .accent { color: var(--accent); }
-        .btn-accent { background: var(--accent); color: #111827; }
-        
-        /* Horizontal carousel for services */
-        .hc-scroll { 
-            overflow-x:auto; 
-            scroll-behavior:smooth; 
-            -webkit-overflow-scrolling: touch; 
-            cursor: grab; 
-            /* Oculta a barra de rolagem no Firefox */
-            scrollbar-width: thin;
-            scrollbar-color: rgba(255, 255, 255, 0.15) transparent;
-        }
-        .hc-scroll.active-drag {
-            cursor: grabbing;
-        }
+        .btn-accent { background: var(--accent); color: #111827; transition: transform .2s ease, box-shadow .2s ease; box-shadow: 0 6px 20px rgba(246, 194, 70, 0.15); }
+        .btn-accent:hover { transform: translateY(-1px); box-shadow: 0 10px 24px rgba(246, 194, 70, 0.25); }
+        .btn-outline { border: 1px solid rgba(255,255,255,0.2); color: #fff; transition: background .2s ease, transform .2s ease, border-color .2s ease; }
+        .btn-outline:hover { background: rgba(255,255,255,0.06); border-color: rgba(255,255,255,0.35); transform: translateY(-1px); }
+        .badge { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.08); padding: 0.25rem 0.6rem; border-radius: 9999px; }
 
+        /* Glass effect header */
+        .glass { background: rgba(0,0,0,0.55); backdrop-filter: saturate(180%) blur(10px); -webkit-backdrop-filter: saturate(180%) blur(10px); border-bottom: 1px solid rgba(255,255,255,0.06); }
+
+        /* Carrosséis horizontais */
+        .hc-scroll { overflow-x: auto; scroll-behavior: smooth; -webkit-overflow-scrolling: touch; cursor: grab; scrollbar-width: thin; scrollbar-color: rgba(255,255,255,0.15) transparent; }
+        .hc-scroll.active-drag { cursor: grabbing; }
         .hc-item { width: 280px; flex: 0 0 auto; }
-        /* Simple arrows */
-        .arrow-btn { background: rgba(255,255,255,0.04); border-radius:9999px; width:40px; height:40px; display:flex; align-items:center; justify-content:center; }
-        /* Testimonials */
+        .arrow-btn { background: rgba(255,255,255,0.06); border-radius: 9999px; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; }
         .testimonial { min-height: 120px; }
-        /* Floating WhatsApp */
         .whatsapp-float { position: fixed; right: 20px; bottom: 20px; z-index: 60; }
-        /* Smooth scroll offset */
         html { scroll-behavior: smooth; }
-        /* Adicione estilo para as estrelas, se quiser */
         .star-rating { display: inline-block; color: var(--accent); }
         .star-rating span { font-size: 1.2em; }
 
-        /* Estilos para a barra de rolagem (Chrome, Safari, Edge) */
-        /* 1. Define a largura da barra (Torna-a fina, como a do YouTube) */
-        .hc-scroll::-webkit-scrollbar {
-            height: 6px; /* Altura da barra horizontal */
-        }
+        /* Aparência de seções */
+        .section-title { position: relative; padding-bottom: 0.4rem; }
+        .section-title::after { content: ''; position: absolute; left: 0; bottom: 0; height: 3px; width: 72px; background: linear-gradient(90deg, var(--accent), rgba(246,194,70,0)); border-radius: 999px; }
 
-        /* 2. Define o fundo da trilha (Deixa transparente) */
-        .hc-scroll::-webkit-scrollbar-track {
-            background: transparent;
-        }
+        /* Scrollbar (WebKit) */
+        .hc-scroll::-webkit-scrollbar { height: 6px; }
+        .hc-scroll::-webkit-scrollbar-track { background: transparent; }
+        .hc-scroll::-webkit-scrollbar-thumb { background-color: rgba(255, 255, 255, 0.2); border-radius: 10px; }
+        .hc-scroll::-webkit-scrollbar-thumb:hover { background-color: rgba(255, 255, 255, 0.4); }
 
-        /* 3. Define a cor do 'polegar' (thumb) da barra (Fica cinza claro, sutil) */
-        .hc-scroll::-webkit-scrollbar-thumb {
-            background-color: rgba(255, 255, 255, 0.2); /* Cinza claro suave */
-            border-radius: 10px;
-        }
-
-        /* 4. Torna-a um pouco mais visível ao passar o mouse */
-        .hc-scroll::-webkit-scrollbar-thumb:hover {
-            background-color: rgba(255, 255, 255, 0.4); /* Fica mais claro ao passar o mouse */
-        }
-
-
-        /* Estilo para a imagem de fundo na seção Home */
-        .home-bg-image {
-            position: absolute;
-            bottom: 0; 
-            right: 0;
-            width: 100%;
-            height: 100%;
-            background-image: url('home.png');
-            background-size: contain; 
-            background-repeat: no-repeat;
-            background-position: bottom right; 
-            opacity: 0.7; /* Opacidade ajustada */
-            z-index: -1; 
-            filter: grayscale(100%); 
-            pointer-events: none; 
-        }
-
-        /* Em telas maiores (md), a imagem volta a ser um item separado na grid */
+        /* Home visual */
+        .home-bg-image { position: absolute; bottom: 0; right: 0; width: 100%; height: 100%; background-image: url('home.png'); background-size: cover; background-repeat: no-repeat; background-position: center right; opacity: 0.65; z-index: -1; filter: grayscale(100%); pointer-events: none; }
         @media (min-width: 768px) {
-            .home-bg-image {
-                position: relative; 
-                height: 100%; 
-                width: 100%;
-                background-image: none; 
-                opacity: 1; 
-                filter: none; 
-                display: block; 
-            }
-            .home-bg-image img {
-                display: block; 
-            }
-        }
-        
-        /* Estilo para o menu mobile (transição) */
-        .mobile-menu {
-            transform: translateX(100%);
-            transition: transform 0.3s ease-in-out;
-        }
-        .mobile-menu.open {
-            transform: translateX(0);
+          .home-bg-image { position: relative; height: 100%; width: 100%; background-image: none; opacity: 1; filter: none; display: block; }
+          .home-bg-image img { display: block; object-position: center right; }
         }
 
-        /* Estilo para o fundo do menu mobile */
-        #mobile-menu {
-            background-color: rgba(18, 18, 20, 0.95); /* Cor dos cards com 95% de opacidade */
-        }
-        
-    </style>
+        /* Menu mobile */
+        .mobile-menu { transform: translateX(100%); transition: transform 0.3s ease-in-out; }
+        .mobile-menu.open { transform: translateX(0); }
+        #mobile-menu { background-color: rgba(18, 18, 20, 0.95); }
 
-    <script type="application/ld+json">
-    {
+        /* Melhorias de hover nas mídias do portfólio */
+        .card .object-cover { transition: transform .4s ease; }
+        .card:hover .object-cover { transform: scale(1.03); }
+
+        /* Testemunhos estilo citação */
+        #testi-list .testimonial { border-left: 3px solid var(--accent); padding-left: 1rem; }
+        #testi-list .testimonial p { font-style: italic; }
+
+        /* Barra fixa de CTA no mobile */
+        .mobile-cta { position: fixed; left: 0; right: 0; bottom: 0; z-index: 70; display: none; gap: .75rem; padding: .75rem; background: rgba(0,0,0,.75); border-top: 1px solid rgba(255,255,255,.06); backdrop-filter: saturate(180%) blur(8px); }
+        .mobile-cta a { flex: 1; text-align: center; padding: .75rem; border-radius: .5rem; font-weight: 600; }
+        .mobile-cta .call { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); }
+        .mobile-cta .wa { background: #25D366; color: #0f2418; }
+        @media (max-width: 767px) { .mobile-cta { display: flex; } .whatsapp-float { display: none; } }
+      </style>
+
+      <script type="application/ld+json">
+      {
         "@context": "https://schema.org",
         "@type": "Electrician",
         "name": "NM Soluções Elétricas",
         "description": "Eletricista profissional no Rio de Janeiro para instalações, manutenção e projetos elétricos residenciais e comerciais. Conte com segurança, qualidade e orçamento grátis.",
         "telephone": "+5521964675661",
-        "url": "https://pensarei.github.io/nm-solucoes-eletricas/", "image": "https://pensarei.github.io/nm-solucoes-eletricas/home.png", "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "Rio de Janeiro",
-            "addressRegion": "RJ",
-            "addressCountry": "BR"
-        },
-        "areaServed": {
-            "@type": "State",
-            "name": "Rio de Janeiro"
-        },
+        "url": "https://pensarei.github.io/nm-solucoes-eletricas/",
+        "image": "https://pensarei.github.io/nm-solucoes-eletricas/home.png",
+        "address": {"@type": "PostalAddress", "addressLocality": "Rio de Janeiro", "addressRegion": "RJ", "addressCountry": "BR"},
+        "areaServed": {"@type": "State", "name": "Rio de Janeiro"},
         "openingHours": "Mo-Fr 08:00-17:00",
-        "hasMap": "https://www.google.com/maps/search/?api=1&query=eletricista+rio+de+janeiro", "sameAs": [
-            "https://wa.me/5521964675661",
-            "URL_SUAS_REDES_SOCIAL_AQUI" 
-        ]
-    }
-    </script>
-</head>
-<body class="antialiased" id="page-root">
-
-    <aside id="mobile-menu" class="mobile-menu fixed top-0 right-0 w-64 h-full bg-black card shadow-lg z-50 p-6 flex flex-col space-y-4 md:hidden">
+        "hasMap": "https://www.google.com/maps/search/?api=1&query=eletricista+rio+de+janeiro",
+        "sameAs": ["https://wa.me/5521964675661"]
+      }
+      </script>
+    </head>
+    <body class="antialiased" id="page-root">
+      <!-- Menu Mobile -->
+      <aside id="mobile-menu" class="mobile-menu fixed top-0 right-0 w-64 h-full card shadow-lg z-50 p-6 flex flex-col space-y-4 md:hidden" aria-label="Menu móvel">
         <div class="flex justify-end">
-            <button id="mobile-close" class="p-2 arrow-btn text-xl">✕</button>
+          <button id="mobile-close" class="p-2 arrow-btn text-xl" aria-label="Fechar menu">✕</button>
         </div>
-        
         <a href="#home" class="text-xl font-semibold hover:accent" onclick="closeMobileMenu()">Home</a>
         <a href="#sobre" class="text-xl font-semibold hover:accent" onclick="closeMobileMenu()">Sobre</a>
         <a href="#servicos" class="text-xl font-semibold hover:accent" onclick="closeMobileMenu()">Serviços</a>
         <a href="#portfolio" class="text-xl font-semibold hover:accent" onclick="closeMobileMenu()">Portfólio</a>
-        <a href="#depoimentos" class="text-xl font-semibold hover:accent" onclick="closeMobileMenu()">Depoimentos</a>
+      <a href="#depoimentos" class="text-xl font-semibold hover:accent" onclick="closeMobileMenu()">Depoimentos</a>
+      <a href="#como-trabalhamos" class="text-xl font-semibold hover:accent" onclick="closeMobileMenu()">Como Trabalhamos</a>
+      <a href="#faq" class="text-xl font-semibold hover:accent" onclick="closeMobileMenu()">Dúvidas (FAQ)</a>
         <a href="#contato" class="text-xl font-semibold hover:accent" onclick="closeMobileMenu()">Contato</a>
-        
         <div class="pt-6">
-            <a class="btn-accent px-5 py-2 rounded shadow font-semibold w-full text-center block" href="https://wa.me/5521964675661?text=Ol%C3%A1%2C%20gostaria%20de%20um%20or%C3%A7amento%20para%20meu%20imovel.">Chamar no WhatsApp</a>
+          <a class="btn-accent px-5 py-2 rounded shadow font-semibold w-full text-center block" href="https://wa.me/5521964675661?text=Ol%C3%A1%2C%20gostaria%20de%20um%20or%C3%A7amento%20para%20meu%20im%C3%B3vel.">Chamar no WhatsApp</a>
         </div>
-    </aside>
+      </aside>
+      <div id="menu-overlay" class="fixed inset-0 bg-black bg-opacity-50 z-40 hidden md:hidden" onclick="closeMobileMenu()" aria-hidden="true"></div>
 
-    <div id="menu-overlay" class="fixed inset-0 bg-black bg-opacity-50 z-40 hidden md:hidden" onclick="closeMobileMenu()"></div>
-
-    <header class="w-full fixed top-0 left-0 z-40">
-        <div class="w-full bg-black shadow-md px-4 py-3 flex items-center">
-        
-            <div class="flex items-center space-x-8"> 
-            
-                <div class="flex items-center space-x-3">
-                    <div class="w-12 h-12 rounded-full bg-black card flex items-center justify-center border border-white/5">
-                        <span class="font-bold accent">NM</span>
-                    </div>
-                    <div>
-                        <a href="#home" class="text-2xl font-semibold">NM Soluções Elétricas</a>
-                        <div class="text-sm text-gray-200 font-bold">Eletrotécnico Marlon dos Santos</div>
-                    </div>
-                </div>
-
-                <nav class="hidden md:flex items-center space-x-6 text-xl">
-                    <a href="#home" class="hover:underline">Home</a>
-                    <a href="#sobre" class="hover:underline">Sobre</a>
-                    <a href="#servicos" class="hover:underline">Serviços</a>
-                    <a href="#portfolio" class="hover:underline">Portfólio</a>
-                    <a href="#depoimentos" class="hover:underline">Depoimentos</a>
-                    <a href="#contato" class="hover:underline">Contato</a>
-                </nav>
+      <!-- Cabeçalho -->
+      <header class="w-full fixed top-0 left-0 z-40 glass shadow-md">
+        <div class="max-w-screen-2xl mx-auto px-4 py-3 flex items-center justify-between">
+          <div class="flex items-center space-x-3">
+            <div class="w-10 h-10 rounded-full card flex items-center justify-center border border-white/5">
+              <span class="font-bold accent">NM</span>
             </div>
-            <div class="md:hidden ml-auto">
-                <button id="mobile-open" class="p-3 arrow-btn">☰</button>
-            </div>
-
-        </div>
-    </header>
-    
-    <main class="pt-24">
-
-        <section id="home" class="w-full px-4 py-16 grid md:grid-cols-2 gap-8 items-center relative"> 
             <div>
-                <h1 class="text-4xl md:text-5xl font-extrabold leading-tight accent">Instalação segura para sua casa ou negócio ⚡</h1>
-                <p class="mt-4 text-gray-300">A <strong>NM Soluções Elétricas</strong> oferece serviços de <strong>eletricista no Rio de Janeiro</strong>, garantindo instalações elétricas seguras, manutenção preventiva e projetos eficientes para residências e comércios. Conte com a experiência desde 2014 para soluções de qualidade em todo o RJ.</p>
-                <div class="mt-6 flex items-center space-x-4">
-                    <a class="btn-accent px-5 py-3 rounded shadow font-semibold" href="https://wa.me/5521964675661?text=Ol%C3%A1%2C%20gostaria%20de%20um%20or%C3%A7amento%20para%20meu%20im%C3%B3vel.">Chamar no WhatsApp</a>
-                    <div class="text-sm text-gray-400">Seg a Sex: 8h às 17h</div>
-                </div>
-
-                <div class="mt-8 flex items-center space-x-6 text-gray-400">
-                    <div class="flex flex-col items-center">
-                        <div class="w-10 h-10 card flex items-center justify-center rounded mb-2">🏠</div>
-                        <div class="text-xs">Residencial</div>
-                    </div>
-                    <div class="flex flex-col items-center">
-                        <div class="w-10 h-10 card flex items-center justify-center rounded mb-2">🏢</div>
-                        <div class="text-xs">Comercial</div>
-                    </div>
-                </div>
+              <a href="#home" class="text-xl font-semibold">NM Soluções Elétricas</a>
+              <div class="text-xs text-gray-400">Eletrotécnico Marlon dos Santos</div>
             </div>
+          </div>
+          <nav class="hidden md:flex items-center space-x-6 text-sm" aria-label="Navegação principal">
+            <a href="#home" class="hover:underline">Home</a>
+            <a href="#sobre" class="hover:underline">Sobre</a>
+            <a href="#servicos" class="hover:underline">Serviços</a>
+            <a href="#portfolio" class="hover:underline">Portfólio</a>
+            <a href="#depoimentos" class="hover:underline">Depoimentos</a>
+            <a href="#como-trabalhamos" class="hover:underline">Como Trabalhamos</a>
+            <a href="#faq" class="hover:underline">Dúvidas (FAQ)</a>
+            <a href="#contato" class="hover:underline">Contato</a>
+          </nav>
+          <div class="md:hidden ml-auto">
+            <button id="mobile-open" class="p-3 arrow-btn" aria-label="Abrir menu">☰</button>
+          </div>
+        </div>
+      </header>
 
-            <div class="rounded overflow-hidden shadow-lg home-bg-image">
-                <img src="home.png" alt="Painel elétrico moderno instalado pela NM Soluções Elétricas no Rio de Janeiro - Segurança e qualidade em serviços de eletricista." class="w-full object-cover h-72 md:h-96 hidden md:block"/> 
+      <main class="pt-24">
+        <!-- Home -->
+      <section id="home" class="w-full px-4 py-16 relative">
+        <div class="max-w-screen-2xl mx-auto grid md:grid-cols-2 xl:grid-cols-12 gap-10 items-center">
+          <div class="xl:col-span-5">
+            <h1 class="text-4xl md:text-5xl font-extrabold leading-tight accent">Instalação segura para sua casa ou negócio ⚡</h1>
+            <p class="mt-4 text-gray-300">A <strong>NM Soluções Elétricas</strong> oferece serviços de <strong>eletricista no Rio de Janeiro</strong>, garantindo instalações elétricas seguras, manutenção preventiva e projetos eficientes para residências e comércios. Conte com a experiência desde 2014 para soluções de qualidade em todo o RJ.</p>
+            <div class="mt-6 flex items-center space-x-3">
+              <a class="btn-accent px-5 py-3 rounded shadow font-semibold inline-flex items-center gap-2" href="https://wa.me/5521964675661?text=Ol%C3%A1%2C%20gostaria%20de%20um%20or%C3%A7amento%20para%20meu%20im%C3%B3vel.">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.52 3.48A11.94 11.94 0 0012 0C5.38 0 0 5.38 0 12c0 2.1.54 4.15 1.6 5.97L0 24l6.19-1.63A11.97 11.97 0 0012 24c6.62 0 12-5.38 12-12 0-3.19-1.25-6.19-3.48-8.52zM12 22a9.9 9.9 0 01-5.06-1.39l-.36-.21-3.68.97.98-3.59-.23-.37A9.94 9.94 0 1122 12c0 5.52-4.48 10-10 10zm5.44-7.56c-.3-.15-1.77-.87-2.05-.97-.28-.1-.49-.15-.7.15-.2.3-.8.97-.98 1.17-.18.2-.36.22-.66.07-.3-.15-1.27-.47-2.42-1.5-.9-.8-1.5-1.77-1.68-2.07-.18-.3-.02-.46.13-.61.13-.13.3-.34.45-.51.15-.17.2-.29.3-.49.1-.2.05-.37-.02-.52-.07-.15-.7-1.68-.96-2.3-.25-.6-.5-.52-.7-.52h-.6c-.2 0-.52.07-.8.37-.28.3-1.06 1.04-1.06 2.54s1.09 2.94 1.24 3.14c.15.2 2.13 3.25 5.15 4.56.72.31 1.28.5 1.72.64.72.23 1.37.2 1.89.12.58-.09 1.77-.72 2.02-1.43.25-.71.25-1.32.17-1.45-.08-.13-.27-.2-.57-.35z"/></svg>
+                Chamar no WhatsApp
+              </a>
+              <a class="btn-outline px-5 py-3 rounded font-semibold inline-flex items-center gap-2" href="tel:+5521964675661">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24c1.12.37 2.33.57 3.57.57a1 1 0 011 1V21a1 1 0 01-1 1C10.3 22 2 13.7 2 3a1 1 0 011-1h4.5a1 1 0 011 1c0 1.24.2 2.45.57 3.57a1 1 0 01-.24 1.02l-2.2 2.2z"/></svg>
+                Ligar agora
+              </a>
+              <div class="hidden md:block text-sm text-gray-400">Seg a Sex: 8h às 17h</div>
             </div>
+            <div class="mt-4 flex flex-wrap gap-2 text-xs text-gray-300">
+              <span class="badge">Desde 2014</span>
+              <span class="badge">Profissional qualificado</span>
+              <span class="badge">Atendimento em todo RJ</span>
+            </div>
+            <div class="mt-8 flex items-center space-x-6 text-gray-400">
+              <div class="flex flex-col items-center">
+                <div class="w-10 h-10 card flex items-center justify-center rounded mb-2">🏠</div>
+                <div class="text-xs">Residencial</div>
+              </div>
+              <div class="flex flex-col items-center">
+                <div class="w-10 h-10 card flex items-center justify-center rounded mb-2">🏢</div>
+                <div class="text-xs">Comercial</div>
+              </div>
+            </div>
+          </div>
+          <div class="xl:col-span-7 rounded overflow-hidden shadow-lg home-bg-image">
+            <img src="home.png" alt="Painel elétrico moderno instalado pela NM Soluções Elétricas no Rio de Janeiro - Segurança e qualidade." class="w-full object-cover h-80 md:h-[28rem] xl:h-[36rem] 2xl:h-[42rem] hidden md:block" loading="eager" decoding="async" fetchpriority="high" />
+          </div>
+        </div>
         </section>
 
+        <!-- Sobre -->
         <section id="sobre" class="w-full px-4 py-12">
-            <div class="card p-8 rounded">
-                <h2 class="text-2xl font-bold">Quem Somos: Eletricista com Experiência no Rio de Janeiro</h2>
-                <p class="mt-3 text-gray-300">A <strong>NM Soluções Elétricas</strong>, comandada pelo experiente eletrotécnico <strong>Marlon dos Santos</strong>, é a sua escolha confiável para <strong>serviços elétricos no Rio de Janeiro</strong>. Desde 2014, atuamos com dedicação em <strong>instalações elétricas residenciais e comerciais</strong>, garantindo soluções seguras e eficientes em toda a cidade do RJ. Nosso compromisso é com a qualidade, a segurança das suas instalações e um <a href="#contato" class="underline">atendimento rápido e transparente</a>. Se você busca um <strong class="accent">eletricista qualificado no Rio de Janeiro</strong>, conte com a NM Soluções Elétricas.</p>
-                <div class="mt-6 grid grid-cols-2 md:grid-cols-4 gap-4">
-                    <div class="p-4 card rounded text-center">
-                        <div class="text-xl">🎓</div>
-                        <div class="font-semibold mt-2">Profissional qualificado</div>
-                    </div>
-                    <div class="p-4 card rounded text-center">
-                        <div class="text-xl">⚡</div>
-                        <div class="font-semibold mt-2">Experiência desde 2014</div>
-                    </div>
-                    <div class="p-4 card rounded text-center">
-                        <div class="text-xl">🔒</div>
-                        <div class="font-semibold mt-2">Segurança e confiabilidade</div>
-                    </div>
-                    <div class="p-4 card rounded text-center">
-                        <div class="text-xl">🧾</div>
-                        <div class="font-semibold mt-2">Orçamento sem compromisso</div>
-                    </div>
-                </div>
+          <div class="card p-8 rounded max-w-screen-2xl mx-auto">
+            <h2 class="text-2xl font-bold section-title">Quem Somos: Eletricista com Experiência no Rio de Janeiro</h2>
+            <p class="mt-3 text-gray-300">A <strong>NM Soluções Elétricas</strong>, comandada pelo experiente eletrotécnico <strong>Marlon dos Santos</strong>, é a sua escolha confiável para <strong>serviços elétricos no Rio de Janeiro</strong>. Desde 2014, atuamos com dedicação em <strong>instalações elétricas residenciais e comerciais</strong>, garantindo soluções seguras e eficientes em toda a cidade do RJ. Nosso compromisso é com a qualidade, a segurança das suas instalações e um <a href="#contato" class="underline">atendimento rápido e transparente</a>. Se você busca um <strong class="accent">eletricista qualificado no Rio de Janeiro</strong>, conte com a NM Soluções Elétricas.</p>
+            <div class="mt-6 grid grid-cols-2 md:grid-cols-4 gap-4">
+              <div class="p-4 card rounded text-center">
+                <div class="text-xl">🎓</div>
+                <div class="font-semibold mt-2">Profissional qualificado</div>
+              </div>
+              <div class="p-4 card rounded text-center">
+                <div class="text-xl">⚡</div>
+                <div class="font-semibold mt-2">Experiência desde 2014</div>
+              </div>
+              <div class="p-4 card rounded text-center">
+                <div class="text-xl">🔒</div>
+                <div class="font-semibold mt-2">Segurança e confiabilidade</div>
+              </div>
+              <div class="p-4 card rounded text-center">
+                <div class="text-xl">🧾</div>
+                <div class="font-semibold mt-2">Orçamento sem compromisso</div>
+              </div>
             </div>
+          </div>
         </section>
 
-        <section id="servicos" class="w-full mx-auto py-12">
-            <h2 class="text-2xl font-bold mb-4 px-4">Nossos Serviços Elétricos no Rio de Janeiro</h2>
-            <div class="relative">
-                <div id="services-carousel" class="hc-scroll flex space-x-4 px-4 pb-4 cursor-grab">
-                    
-                    <div class="hc-item card rounded p-6 flex flex-col justify-between">
-                        <div>
-                            <h3 class="font-bold text-lg">🔌 Instalações elétricas</h3>
-                            <p class="mt-2 text-gray-300">Realizamos instalações de tomadas, fiação, iluminação e disjuntores com total segurança no RJ.</p>
-                        </div>
-                        <button class="mt-4 btn-accent px-4 py-2 rounded" onclick="openWA('Instalações elétricas')">Pedir orçamento</button>
-                    </div>
-
-                    <div class="hc-item card rounded p-6 flex flex-col justify-between">
-                        <div>
-                            <h3 class="font-bold text-lg">🧰 Manutenção elétrica</h3>
-                            <p class="mt-2 text-gray-300">Serviços de reparo e diagnóstico de falhas elétricas para sua casa ou empresa no Rio de Janeiro.</p>
-                        </div>
-                        <button class="mt-4 btn-accent px-4 py-2 rounded" onclick="openWA('Manutenção elétrica')">Pedir orçamento</button>
-                    </div>
-
-                    <div class="hc-item card rounded p-6 flex flex-col justify-between">
-                        <div>
-                            <h3 class="font-bold text-lg">💡 Iluminação LED</h3>
-                            <p class="mt-2 text-gray-300">Projetos de iluminação LED modernos e econômicos para residências e comércios cariocas.</p>
-                        </div>
-                        <button class="mt-4 btn-accent px-4 py-2 rounded" onclick="openWA('Iluminação LED')">Pedir orçamento</button>
-                    </div>
-
-                    <div class="hc-item card rounded p-6 flex flex-col justify-between">
-                        <div>
-                            <h3 class="font-bold text-lg">⚡ Adequações e melhorias</h3>
-                            <p class="mt-2 text-gray-300">Atualização de sistemas elétricos para segurança e eficiência em imóveis no RJ.</p>
-                        </div>
-                        <button class="mt-4 btn-accent px-4 py-2 rounded" onclick="openWA('Adequações e melhorias')">Pedir orçamento</button>
-                    </div>
+        <!-- Serviços -->
+        <section id="servicos" class="w-full mx-auto px-4 py-12">
+          <h2 class="text-2xl font-bold mb-4 max-w-screen-2xl mx-auto section-title">Nossos Serviços Elétricos no Rio de Janeiro</h2>
+          <div class="relative max-w-screen-2xl mx-auto">
+            <button id="prev-serv" class="absolute left-0 top-1/2 transform -translate-y-1/2 hidden md:flex arrow-btn z-30" aria-label="Anterior">◀</button>
+            <div id="services-carousel" class="hc-scroll flex space-x-4 px-12 md:px-6 pb-4" aria-label="Carrossel de serviços">
+              <div class="hc-item card rounded p-6 flex flex-col justify-between">
+                <div>
+                  <h3 class="font-bold text-lg">🔌 Instalações elétricas</h3>
+                  <p class="mt-2 text-gray-300">Instalações de tomadas, fiação, iluminação e disjuntores com total segurança no RJ.</p>
                 </div>
+                <button class="mt-4 btn-accent px-4 py-2 rounded" onclick="openWA('Instalações elétricas')">Pedir orçamento</button>
+              </div>
+              <div class="hc-item card rounded p-6 flex flex-col justify-between">
+                <div>
+                  <h3 class="font-bold text-lg">🧰 Manutenção elétrica</h3>
+                  <p class="mt-2 text-gray-300">Reparo e diagnóstico de falhas elétricas para sua casa ou empresa no Rio de Janeiro.</p>
+                </div>
+                <button class="mt-4 btn-accent px-4 py-2 rounded" onclick="openWA('Manutenção elétrica')">Pedir orçamento</button>
+              </div>
+              <div class="hc-item card rounded p-6 flex flex-col justify-between">
+                <div>
+                  <h3 class="font-bold text-lg">💡 Iluminação LED</h3>
+                  <p class="mt-2 text-gray-300">Projetos de iluminação LED modernos e econômicos para residências e comércios.</p>
+                </div>
+                <button class="mt-4 btn-accent px-4 py-2 rounded" onclick="openWA('Iluminação LED')">Pedir orçamento</button>
+              </div>
+              <div class="hc-item card rounded p-6 flex flex-col justify-between">
+                <div>
+                  <h3 class="font-bold text-lg">⚡ Adequações e melhorias</h3>
+                  <p class="mt-2 text-gray-300">Atualização de sistemas elétricos para segurança e eficiência.</p>
+                </div>
+                <button class="mt-4 btn-accent px-4 py-2 rounded" onclick="openWA('Adequações e melhorias')">Pedir orçamento</button>
+              </div>
             </div>
+            <button id="next-serv" class="absolute right-0 top-1/2 transform -translate-y-1/2 hidden md:flex arrow-btn z-30" aria-label="Próximo">▶</button>
+          </div>
         </section>
 
-        <section id="portfolio" class="w-full mx-auto py-12">
-            <h2 class="text-2xl font-bold mb-6 px-4">Portfólio de Serviços Elétricos Realizados no RJ</h2>
-            <div class="relative">
-                <div id="portfolio-carousel" class="hc-scroll flex space-x-4 px-4 pb-4 cursor-grab">
-                </div>
-            </div>
+        <!-- Portfólio -->
+        <section id="portfolio" class="w-full mx-auto px-4 py-12">
+          <h2 class="text-2xl font-bold mb-6 max-w-screen-2xl mx-auto section-title">Portfólio de Serviços Elétricos Realizados no RJ</h2>
+          <div class="relative max-w-screen-2xl mx-auto">
+            <button id="prev-port" class="absolute left-0 top-1/2 transform -translate-y-1/2 hidden md:flex arrow-btn z-30" aria-label="Anterior">◀</button>
+            <div id="portfolio-carousel" class="hc-scroll flex space-x-4 px-12 md:px-6 pb-4" aria-label="Carrossel de portfólio"></div>
+            <button id="next-port" class="absolute right-0 top-1/2 transform -translate-y-1/2 hidden md:flex arrow-btn z-30" aria-label="Próximo">▶</button>
+          </div>
         </section>
 
+        <!-- Depoimentos -->
         <section id="depoimentos" class="w-full mx-auto px-4 py-12">
-            <h2 class="text-2xl font-bold mb-6">Depoimentos de Clientes Satisfeitos no Rio de Janeiro</h2>
-            <div id="testi-wrap" class="card p-6 rounded">
-                <div id="testi-list" class="relative overflow-hidden">
-                </div>
-            </div>
+          <h2 class="text-2xl font-bold mb-6 max-w-screen-2xl mx-auto section-title">Depoimentos de Clientes Satisfeitos no Rio de Janeiro</h2>
+          <div id="testi-wrap" class="card p-6 rounded max-w-screen-2xl mx-auto">
+            <div id="testi-list" class="relative overflow-hidden"></div>
+          </div>
         </section>
 
+        <!-- Especialidades (grande valor e densidade semântica) -->
+        <section id="especialidades" class="w-full mx-auto px-4 py-12">
+          <div class="max-w-screen-2xl mx-auto">
+            <h2 class="text-2xl font-bold mb-6 section-title">Especialidades</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div class="card p-6 rounded">
+                <div class="text-3xl">🛡️</div>
+                <h3 class="mt-2 font-semibold text-lg">Quadros de distribuição (QDC)</h3>
+                <p class="mt-2 text-gray-300">Montagem, organização e atualização de quadros, disjuntores e barramentos conforme normas técnicas, com foco em segurança e expansão futura.</p>
+              </div>
+              <div class="card p-6 rounded">
+                <div class="text-3xl">💡</div>
+                <h3 class="mt-2 font-semibold text-lg">Projetos de iluminação</h3>
+                <p class="mt-2 text-gray-300">Soluções LED com maior eficiência, estética e redução de consumo. Instalação de spots, perfis e luminárias inteligentes.</p>
+              </div>
+              <div class="card p-6 rounded">
+                <div class="text-3xl">🔌</div>
+                <h3 class="mt-2 font-semibold text-lg">Pontos elétricos e tomadas</h3>
+                <p class="mt-2 text-gray-300">Ampliação de rede interna, novos circuitos, aterramento, DR e DPS, com medições e testes para garantir estabilidade.</p>
+              </div>
+              <div class="card p-6 rounded">
+                <div class="text-3xl">🏢</div>
+                <h3 class="mt-2 font-semibold text-lg">Residencial e comercial</h3>
+                <p class="mt-2 text-gray-300">Atuação em apartamentos, casas, lojas e escritórios. Adequação de carga, balanceamento e documentação.</p>
+              </div>
+              <div class="card p-6 rounded">
+                <div class="text-3xl">🧰</div>
+                <h3 class="mt-2 font-semibold text-lg">Diagnóstico e manutenção</h3>
+                <p class="mt-2 text-gray-300">Identificação rápida de curto, fuga e aquecimento. Correções com mínimo impacto e prevenção de novas falhas.</p>
+              </div>
+              <div class="card p-6 rounded">
+                <div class="text-3xl">⚙️</div>
+                <h3 class="mt-2 font-semibold text-lg">Padronização conforme norma</h3>
+                <p class="mt-2 text-gray-300">Conformidade com NBR 5410 e boas práticas, garantindo segurança, organização e valorização do imóvel.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Como Trabalhamos (processo em etapas) -->
+        <section id="como-trabalhamos" class="w-full mx-auto px-4 py-12">
+          <div class="max-w-screen-2xl mx-auto">
+            <h2 class="text-2xl font-bold mb-6 section-title">Como Trabalhamos</h2>
+            <div class="grid md:grid-cols-4 gap-6">
+              <div class="card p-6 rounded">
+                <div class="text-3xl">1️⃣</div>
+                <h3 class="mt-2 font-semibold">Contato</h3>
+                <p class="mt-2 text-gray-300">Você chama no WhatsApp ou telefone e descreve a necessidade.</p>
+              </div>
+              <div class="card p-6 rounded">
+                <div class="text-3xl">2️⃣</div>
+                <h3 class="mt-2 font-semibold">Visita/avaliação</h3>
+                <p class="mt-2 text-gray-300">Avaliação local e recomendações com foco em segurança e custo-benefício.</p>
+              </div>
+              <div class="card p-6 rounded">
+                <div class="text-3xl">3️⃣</div>
+                <h3 class="mt-2 font-semibold">Execução</h3>
+                <p class="mt-2 text-gray-300">Serviço organizado, com materiais adequados e prazos claros.</p>
+              </div>
+              <div class="card p-6 rounded">
+                <div class="text-3xl">4️⃣</div>
+                <h3 class="mt-2 font-semibold">Entrega e garantia</h3>
+                <p class="mt-2 text-gray-300">Testes finais, orientações e garantia de serviço.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Certificações e Garantias -->
+        <section id="certificacoes" class="w-full mx-auto px-4 py-12">
+          <div class="max-w-screen-2xl mx-auto card p-8 rounded">
+            <h2 class="text-2xl font-bold section-title">Certificações e Garantias</h2>
+            <div class="grid md:grid-cols-3 gap-6 mt-6">
+              <div>
+                <h3 class="font-semibold">Formação técnica</h3>
+                <p class="text-gray-300 mt-2">Eletrotécnico com experiência desde 2014. Atualização constante em normas e boas práticas.</p>
+              </div>
+              <div>
+                <h3 class="font-semibold">Normas e segurança</h3>
+                <p class="text-gray-300 mt-2">Conformidade com NBR 5410, uso de DR, DPS e dimensionamento correto de cabos e disjuntores.</p>
+              </div>
+              <div>
+                <h3 class="font-semibold">Garantia e transparência</h3>
+                <p class="text-gray-300 mt-2">Garantia sobre o serviço executado e orçamento sem compromisso.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- FAQ -->
+        <section id="faq" class="w-full mx-auto px-4 py-12">
+          <div class="max-w-screen-2xl mx-auto">
+            <h2 class="text-2xl font-bold mb-6 section-title">Dúvidas Frequentes (FAQ)</h2>
+            <div class="space-y-4">
+              <details class="card p-4 rounded">
+                <summary class="font-semibold cursor-pointer">Vocês atendem quais regiões do Rio?</summary>
+                <p class="mt-2 text-gray-300">Atendemos todo o município do Rio de Janeiro (Zonas Sul, Oeste, Norte e Centro), com foco em Copacabana, Ipanema, Botafogo, Barra, Recreio e Tijuca.</p>
+              </details>
+              <details class="card p-4 rounded">
+                <summary class="font-semibold cursor-pointer">Fazem orçamento sem compromisso?</summary>
+                <p class="mt-2 text-gray-300">Sim. Entre em contato pelo WhatsApp e agendamos uma avaliação.</p>
+              </details>
+              <details class="card p-4 rounded">
+                <summary class="font-semibold cursor-pointer">Trabalham com emergência?</summary>
+                <p class="mt-2 text-gray-300">Dependendo da região e do horário, podemos avaliar atendimento emergencial. Consulte pelo WhatsApp.</p>
+              </details>
+              <details class="card p-4 rounded">
+                <summary class="font-semibold cursor-pointer">Seguem as normas técnicas?</summary>
+                <p class="mt-2 text-gray-300">Sim. Seguimos NBR 5410 e recomendações técnicas para dimensionamento, proteção e segurança.</p>
+              </details>
+            </div>
+          </div>
+        </section>
+
+        <!-- CTA final -->
+        <section id="cta-final" class="w-full mx-auto px-4 py-12">
+          <div class="max-w-screen-2xl mx-auto card p-8 rounded flex flex-col md:flex-row items-center justify-between gap-6">
+            <div>
+              <h2 class="text-2xl font-bold">Precisa de um eletricista profissional no RJ?</h2>
+              <p class="text-gray-300 mt-2">Fale agora pelo WhatsApp ou telefone e receba um orçamento sem compromisso.</p>
+            </div>
+            <div class="flex gap-3">
+              <a class="btn-accent px-5 py-3 rounded shadow font-semibold" href="https://wa.me/5521964675661?text=Ol%C3%A1%2C%20gostaria%20de%20um%20or%C3%A7amento.">Chamar no WhatsApp</a>
+              <a class="btn-outline px-5 py-3 rounded font-semibold" href="tel:+5521964675661">Ligar agora</a>
+            </div>
+          </div>
+        </section>
+
+        <!-- Contato -->
         <footer id="contato" class="w-full mx-auto px-4 py-12">
-            <div class="card p-8 rounded">
-                <div class="grid md:grid-cols-2 gap-6">
-                    <div>
-                        <h3 class="text-xl font-bold">Entre em Contato com seu Eletricista no Rio</h3>
-                        <p class="mt-2"><strong>NM Soluções Elétricas</strong><br/>Eletrotécnico Marlon dos Santos<br/>Atendimento em todo o Rio de Janeiro — RJ</p>
-                        <p class="mt-4">📞 <a class="underline" href="https://wa.me/5521964675661">21 96467-5661</a></p>
-                        <p class="mt-2 text-sm text-gray-400">Seg a Sex: 8h às 17h</p>
-                    </div>
-                    
-                    <div>
-                        <h3 class="text-xl font-bold">Localização e Área de Atendimento</h3>
-                        
-                        <p class="mt-2 text-gray-300">
-                            Nosso serviço de <strong>instalações e reparos elétricos</strong> é realizado em <strong>todo o município do Rio de Janeiro</strong>, atendendo a residências e comércios em todas as grandes regiões da cidade: <strong>Zona Sul, Zona Oeste, Zona Norte e Zona Central.</strong>
-                        </p>
-
-                        <p class="mt-2 text-gray-300">
-                            Temos forte atuação e ampla disponibilidade nos seguintes bairros:
-                        </p>
-
-                        <ul class="list-disc ml-6 mt-2 text-gray-300">
-                            <li><strong>Zona Sul:</strong> Copacabana, Ipanema e Botafogo.</li>
-                            <li><strong>Zona Oeste:</strong> Barra da Tijuca e Recreio dos Bandeirantes.</li>
-                            <li><strong>Grande Tijuca/Zona Norte:</strong> Tijuca.</li>
-                        </ul>
-
-                        <p class="mt-2 text-gray-300 text-sm">
-                            Entre em contato e solicite um orçamento. Nossa cobertura é total na cidade do Rio de Janeiro!
-                        </p>
-
-                        <div class="mt-4 card rounded p-2">
-                            <div class="w-full h-48 flex items-center justify-center text-gray-500">Mapa integrado (Google Maps)</div>
-                        </div>
-                    </div>
+          <div class="card p-8 rounded max-w-screen-2xl mx-auto">
+            <div class="grid md:grid-cols-2 gap-6">
+              <div>
+                <h3 class="text-xl font-bold">Entre em Contato com seu Eletricista no Rio</h3>
+                <p class="mt-2"><strong>NM Soluções Elétricas</strong><br/>Eletrotécnico Marlon dos Santos<br/>Atendimento em todo o Rio de Janeiro — RJ</p>
+                <p class="mt-4">📞 <a class="underline" href="https://wa.me/5521964675661">21 96467-5661</a></p>
+                <p class="mt-2 text-sm text-gray-400">Seg a Sex: 8h às 17h</p>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold">Localização e Área de Atendimento</h3>
+                <p class="mt-2 text-gray-300">Atendemos <strong>todo o município do Rio de Janeiro</strong> (Zonas Sul, Oeste, Norte e Centro) em serviços de <strong>instalações e reparos elétricos</strong> residenciais e comerciais.</p>
+                <p class="mt-2 text-gray-300">Atuação frequente em:</p>
+                <ul class="list-disc ml-6 mt-2 text-gray-300">
+                  <li><strong>Zona Sul:</strong> Copacabana, Ipanema e Botafogo.</li>
+                  <li><strong>Zona Oeste:</strong> Barra da Tijuca e Recreio dos Bandeirantes.</li>
+                  <li><strong>Grande Tijuca/Zona Norte:</strong> Tijuca.</li>
+                </ul>
+                <p class="mt-2 text-gray-300 text-sm">Fale com a gente e solicite um orçamento. Cobertura total na cidade do Rio de Janeiro!</p>
+                <div class="mt-4 card rounded p-2">
+                  <div class="w-full h-48 flex items-center justify-center text-gray-500">Mapa integrado (Google Maps)</div>
                 </div>
-
-                <div class="mt-8 text-center text-sm text-gray-400">
-                    © 2025 NM Soluções Elétricas — Todos os direitos reservados. Eletricista no Rio de Janeiro.
-                </div>
+              </div>
             </div>
+            <div class="mt-8 text-center text-sm text-gray-400">© 2025 NM Soluções Elétricas — Todos os direitos reservados. Eletricista no Rio de Janeiro.</div>
+          </div>
         </footer>
+      </main>
 
-    </main>
-
-    <div class="whatsapp-float">
+      <!-- WhatsApp flutuante -->
+      <div class="whatsapp-float">
         <a href="https://wa.me/5521964675661?text=Ol%C3%A1%2C%20gostaria%20de%20um%20or%C3%A7amento." target="_blank" rel="noopener" title="Chamar no WhatsApp">
-            <div class="w-14 h-14 rounded-full flex items-center justify-center shadow-lg" style="background: #25D366;">
-                <svg width="26" height="26" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg"><path d="M20.47 3.53A11.88 11.88 0 0012 .05C5.37.05.15 5.27.15 11.9c0 2.1.55 4.15 1.6 5.95L.05 24l6.34-1.65a11.82 11.82 0 005.7 1.45h.01c6.63 0 11.85-5.22 11.85-11.85 0-3.17-1.24-6.14-3.58-8.42z"/></svg>
-            </div>
+          <div class="w-14 h-14 rounded-full flex items-center justify-center shadow-lg" style="background: #25D366;">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg"><path d="M20.47 3.53A11.88 11.88 0 0012 .05C5.37.05.15 5.27.15 11.9c0 2.1.55 4.15 1.6 5.95L.05 24l6.34-1.65a11.82 11.82 0 005.7 1.45h.01c6.63 0 11.85-5.22 11.85-11.85 0-3.17-1.24-6.14-3.58-8.42z"/></svg>
+          </div>
         </a>
-    </div>
+      </div>
 
-    <script>
+      <!-- Barra fixa de CTA (mobile) -->
+      <div class="mobile-cta">
+        <a class="call inline-flex items-center justify-center gap-2" href="tel:+5521964675661" aria-label="Ligar agora">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24c1.12.37 2.33.57 3.57.57a1 1 0 011 1V21a1 1 0 01-1 1C10.3 22 2 13.7 2 3a1 1 0 011-1h4.5a1 1 0 011 1c0 1.24.2 2.45.57 3.57a1 1 0 01-.24 1.02l-2.2 2.2z"/></svg>
+          Ligar
+        </a>
+        <a class="wa inline-flex items-center justify-center gap-2" href="https://wa.me/5521964675661?text=Ol%C3%A1%2C%20gostaria%20de%20um%20or%C3%A7amento." aria-label="Chamar no WhatsApp">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.52 3.48A11.94 11.94 0 0012 0C5.38 0 0 5.38 0 12c0 2.1.54 4.15 1.6 5.97L0 24l6.19-1.63A11.97 11.97 0 0012 24c6.62 0 12-5.38 12-12 0-3.19-1.25-6.19-3.48-8.52zM12 22a9.9 9.9 0 01-5.06-1.39l-.36-.21-3.68.97.98-3.59-.23-.37A9.94 9.94 0 1122 12c0 5.52-4.48 10-10 10zm5.44-7.56c-.3-.15-1.77-.87-2.05-.97-.28-.1-.49-.15-.7.15-.2.3-.8.97-.98 1.17-.18.2-.36.22-.66.07-.3-.15-1.27-.47-2.42-1.5-.9-.8-1.5-1.77-1.68-2.07-.18-.3-.02-.46.13-.61.13-.13.3-.34.45-.51.15-.17.2-.29.3-.49.1-.2.05-.37-.02-.52-.07-.15-.7-1.68-.96-2.3-.25-.6-.5-.52-.7-.52h-.6c-.2 0-.52.07-.8.37-.28.3-1.06 1.04-1.06 2.54s1.09 2.94 1.24 3.14c.15.2 2.13 3.25 5.15 4.56.72.31 1.28.5 1.72.64.72.23 1.37.2 1.89.12.58-.09 1.77-.72 2.02-1.43.25-.71.25-1.32.17-1.45-.08-.13-.27-.2-.57-.35z"/></svg>
+          WhatsApp
+        </a>
+      </div>
+
+      <script>
         document.addEventListener('DOMContentLoaded', function() {
-        
-            // ==================== CONTROLES DO MENU MOBILE ====================
-            const mobileMenu = document.getElementById('mobile-menu');
-            const mobileOpenBtn = document.getElementById('mobile-open');
-            const mobileCloseBtn = document.getElementById('mobile-close');
-            const menuOverlay = document.getElementById('menu-overlay');
+          // Menu mobile
+          const mobileMenu = document.getElementById('mobile-menu');
+          const mobileOpenBtn = document.getElementById('mobile-open');
+          const mobileCloseBtn = document.getElementById('mobile-close');
+          const menuOverlay = document.getElementById('menu-overlay');
 
-            function openMobileMenu() {
-                mobileMenu.classList.add('open');
-                menuOverlay.classList.remove('hidden');
-                document.body.style.overflow = 'hidden'; 
-            }
+          function openMobileMenu() {
+            mobileMenu.classList.add('open');
+            menuOverlay.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+          }
+          function closeMobileMenu() {
+            mobileMenu.classList.remove('open');
+            menuOverlay.classList.add('hidden');
+            document.body.style.overflow = 'auto';
+          }
+          window.closeMobileMenu = closeMobileMenu; // usado pelos links com onclick
+          if (mobileOpenBtn) mobileOpenBtn.addEventListener('click', openMobileMenu);
+          if (mobileCloseBtn) mobileCloseBtn.addEventListener('click', closeMobileMenu);
+          if (menuOverlay) menuOverlay.addEventListener('click', closeMobileMenu);
 
-            function closeMobileMenu() {
-                mobileMenu.classList.remove('open');
-                menuOverlay.classList.add('hidden');
-                document.body.style.overflow = 'auto'; 
-            }
+          // Abrir WhatsApp
+          window.openWA = function(service){
+            const msg = encodeURIComponent('Olá, gostaria de solicitar um orçamento para o serviço de: ' + service);
+            window.open('https://wa.me/5521964675661?text=' + msg, '_blank');
+          }
 
-            if (mobileOpenBtn) mobileOpenBtn.addEventListener('click', openMobileMenu);
-            if (mobileCloseBtn) mobileCloseBtn.addEventListener('click', closeMobileMenu);
-            if (menuOverlay) menuOverlay.addEventListener('click', closeMobileMenu);
+          // Drag-to-scroll
+          function enableDragToScroll(id) {
+            const el = document.getElementById(id);
+            if (!el) return;
+            let isDown = false, startX = 0, scrollLeft = 0;
+            el.addEventListener('mousedown', (e) => { isDown = true; el.classList.add('active-drag'); startX = e.pageX - el.offsetLeft; scrollLeft = el.scrollLeft; });
+            ['mouseleave','mouseup'].forEach(evt => el.addEventListener(evt, () => { isDown = false; el.classList.remove('active-drag'); }));
+            el.addEventListener('mousemove', (e) => { if (!isDown) return; e.preventDefault(); const x = e.pageX - el.offsetLeft; const walk = (x - startX) * 1.5; el.scrollLeft = scrollLeft - walk; });
+          }
+          enableDragToScroll('services-carousel');
+          enableDragToScroll('portfolio-carousel');
 
-            const mobileLinks = mobileMenu.querySelectorAll('a[href^="#"]');
-            mobileLinks.forEach(link => {
-                link.addEventListener('click', () => {
-                    closeMobileMenu();
-                });
-            });
+          // Botões de navegação dos carrosséis
+          const servScroll = document.getElementById('services-carousel');
+          const prevServBtn = document.getElementById('prev-serv');
+          const nextServBtn = document.getElementById('next-serv');
+          if (prevServBtn && servScroll) prevServBtn.addEventListener('click', ()=> servScroll.scrollBy({ left: -300, behavior: 'smooth' }));
+          if (nextServBtn && servScroll) nextServBtn.addEventListener('click', ()=> servScroll.scrollBy({ left: 300, behavior: 'smooth' }));
 
-            // Função para abrir o WhatsApp (global)
-            window.openWA = function(service){
-                const msg = encodeURIComponent("Olá, gostaria de solicitar um orçamento para o serviço de: " + service);
-                window.open("https://wa.me/5521964675661?text=" + msg, "_blank");
-            }
+          const portScroll = document.getElementById('portfolio-carousel');
+          const prevPortBtn = document.getElementById('prev-port');
+          const nextPortBtn = document.getElementById('next-port');
+          if (prevPortBtn && portScroll) prevPortBtn.addEventListener('click', ()=> portScroll.scrollBy({ left: -300, behavior: 'smooth' }));
+          if (nextPortBtn && portScroll) nextPortBtn.addEventListener('click', ()=> portScroll.scrollBy({ left: 300, behavior: 'smooth' }));
 
-            // ==================== DRAG-TO-SCROLL FUNCIONALITY ====================
-            // Permite arrastar o carrossel usando o clique do mouse em desktop
-            function enableDragToScroll(containerId) {
-                const slider = document.getElementById(containerId);
-                if (!slider) return;
-
-                let isDown = false;
-                let startX;
-                let scrollLeft;
-
-                slider.addEventListener('mousedown', (e) => {
-                    isDown = true;
-                    slider.classList.add('active-drag');
-                    startX = e.pageX - slider.offsetLeft;
-                    scrollLeft = slider.scrollLeft;
-                });
-
-                slider.addEventListener('mouseleave', () => {
-                    isDown = false;
-                    slider.classList.remove('active-drag');
-                });
-
-                slider.addEventListener('mouseup', () => {
-                    isDown = false;
-                    slider.classList.remove('active-drag');
-                });
-
-                slider.addEventListener('mousemove', (e) => {
-                    if (!isDown) return;
-                    e.preventDefault();
-                    const x = e.pageX - slider.offsetLeft;
-                    const walk = (x - startX) * 1.5; 
-                    slider.scrollLeft = scrollLeft - walk;
-                });
-            }
-
-            enableDragToScroll('services-carousel');
-            enableDragToScroll('portfolio-carousel');
-            
-            // ==================== SCRIPT PARA O PORTFÓLIO DINÂMICO ====================
-
-            const portfolioImagePath = './portfolio-images/'; 
-            const portfolioTextFile = './portfolio-images/portfolio-list.txt'; 
-
-            const portfolioCarousel = document.getElementById('portfolio-carousel');
-
-            function capitalizeWords(str) {
-                if (!str) return '';
-                return str.split(' ').map(word => {
-                    if (word.length === 0) return '';
-                    return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
-                }).join(' ');
-            }
-
-            function isVideo(fileName) {
-                const videoExtensions = ['mp4', 'webm', 'ogg', 'mov', 'avi']; 
-                const parts = fileName.split('.');
-                if (parts.length > 1) {
-                    const extension = parts.pop().toLowerCase();
-                    return videoExtensions.includes(extension);
-                }
-                return false;
-            }
-
-            async function loadPortfolioImages() {
-                if (!portfolioCarousel) return; 
-                
-                try {
-                    const response = await fetch(portfolioTextFile);
-                    if (!response.ok) {
-                        throw new Error(`Erro ao carregar o arquivo de portfólio: ${response.statusText}`);
-                    }
-                    const text = await response.text();
-                    const portfolioItems = text.split('\n').map(line => line.trim()).filter(line => line.length > 0);
-
-                    portfolioItems.forEach(itemFileName => {
-                        const fileNameWithoutExtension = itemFileName.split('.').slice(0, -1).join('.'); 
-                        const parts = fileNameWithoutExtension.split('-');
-
-                        let serviceName = parts[0].replace(/_/g, ' '); 
-                        let location = '';
-                        
-                        if (parts.length > 1) {
-                            location = parts.slice(1).join(' ').replace(/_/g, ' '); 
-                        }
-
-                        serviceName = capitalizeWords(serviceName);
-                        location = capitalizeWords(location);
-
-                        let mediaTag;
-                        if (isVideo(itemFileName)) {
-                            mediaTag = `<video src="${portfolioImagePath}${itemFileName}" autoplay loop muted playsinline class="w-full h-48 object-cover rounded"></video>`;
-                        } else {
-                            mediaTag = `<img src="${portfolioImagePath}${itemFileName}" alt="Serviços Elétricos - ${serviceName} em ${location} - Eletricista RJ" class="w-full h-48 object-cover rounded"/>`;
-                        }
-
-                        const portfolioItemHTML = `
-                            <div class="hc-item card rounded overflow-hidden">
-                                ${mediaTag}
-                                <div class="p-4">
-                                    <div class="font-semibold">${serviceName}</div>
-                                    <div class="text-sm text-gray-400">${location}</div>
-                                </div>
-                            </div>
-                        `;
-                        portfolioCarousel.insertAdjacentHTML('beforeend', portfolioItemHTML);
-                    });
-                } catch (error) {
-                    console.error("Não foi possível carregar o portfólio:", error);
-                    portfolioCarousel.innerHTML = `<p class="text-red-400 px-4">Erro ao carregar o portfólio. Tente novamente mais tarde.</p>`;
-                }
-            }
-
-            loadPortfolioImages();
-
-            // ==================== SCRIPT PARA DEPOIMENTOS DINÂMICOS ====================
-
-            const testiList = document.getElementById('testi-list');
-            const testimonialsTextFile = './testimonials.txt'; 
-
-            function renderTestimonial(testimonial) {
-                return `
-                    <div class="testimonial">
-                        <p class="text-gray-300">"${testimonial.text}"</p>
-                        <div class="mt-2 text-sm text-gray-400">
-                            — ${testimonial.author}
-                        </div>
+          // Portfólio dinâmico
+          const portfolioImagePath = './portfolio-images/';
+          const portfolioTextFile = './portfolio-images/portfolio-list.txt';
+          function isVideo(fileName) {
+            const ext = (fileName.split('.').pop() || '').toLowerCase();
+            return ['mp4','webm','ogg','mov','avi'].includes(ext);
+          }
+          function capitalizeWords(str) {
+            return (str || '').split(' ').map(w => w ? (w[0].toUpperCase() + w.slice(1).toLowerCase()) : '').join(' ');
+          }
+          async function loadPortfolio() {
+            try {
+              const resp = await fetch(portfolioTextFile);
+              if (!resp.ok) throw new Error('Falha ao carregar a lista do portfólio');
+              const text = await resp.text();
+              const items = text.split('\n').map(l => l.trim()).filter(Boolean);
+              items.forEach(name => {
+                const noext = name.split('.').slice(0, -1).join('.');
+                const parts = noext.split('-');
+                let serviceName = capitalizeWords((parts[0] || '').replace(/_/g,' '));
+                let location = capitalizeWords(parts.slice(1).join(' ').replace(/_/g,' '));
+                const media = isVideo(name)
+                  ? `<video src="${portfolioImagePath}${name}" preload="metadata" autoplay loop muted playsinline class="w-full h-48 object-cover rounded"></video>`
+                  : `<img src="${portfolioImagePath}${name}" alt="Serviços Elétricos - ${serviceName} em ${location} - Eletricista RJ" class="w-full h-48 object-cover rounded" loading="lazy" decoding="async" />`;
+                portScroll.insertAdjacentHTML('beforeend', `
+                  <div class="hc-item card rounded overflow-hidden">
+                    ${media}
+                    <div class="p-4">
+                      <div class="font-semibold">${serviceName}</div>
+                      <div class="text-sm text-gray-400">${location}</div>
                     </div>
-                `;
+                  </div>
+                `);
+              });
+            } catch (e) {
+              console.error(e);
+              portScroll.innerHTML = '<p class="text-red-400 px-4">Erro ao carregar o portfólio. Tente novamente mais tarde.</p>';
             }
+          }
+          loadPortfolio();
 
-            async function loadTestimonialsFromTextFile() {
-                if (!testiList) return; 
-                
-                try {
-                    const response = await fetch(testimonialsTextFile);
-                    if (!response.ok) {
-                        throw new Error(`Erro ao carregar o arquivo de depoimentos: ${response.statusText}`);
-                    }
-                    const text = await response.text();
-                    const rawTestimonials = text.split('\n').map(line => line.trim()).filter(line => line.length > 0);
-                    
-                    const parsedTestimonials = rawTestimonials.map(line => {
-                        const parts = line.split('-');
-                        if (parts.length >= 2) {
-                            return {
-                                text: parts[0].trim(),
-                                author: parts[1].trim()
-                            };
-                        }
-                        return null; 
-                    }).filter(Boolean); 
-
-                    testiList.innerHTML = ''; 
-                    parsedTestimonials.forEach((testimonialData) => {
-                        const testimonialHTML = renderTestimonial(testimonialData);
-                        testiList.insertAdjacentHTML('beforeend', testimonialHTML);
-                    });
-
-                    reinitializeTestimonialCarousel();
-
-                } catch (error) {
-                    console.error("Não foi possível carregar os depoimentos:", error);
-                    testiList.innerHTML = `<p class="text-red-400">Erro ao carregar os depoimentos. Tente novamente mais tarde.</p>`;
-                }
+          // Depoimentos dinâmicos
+          const testiList = document.getElementById('testi-list');
+          const testimonialsTextFile = './testimonials.txt';
+          let testiInterval = null;
+          let currentTestiIndex = 0;
+          function renderTestimonial(t) {
+            return `<div class="testimonial"><p class="text-gray-300">"${t.text}"</p><div class="mt-2 text-sm text-gray-400">— ${t.author}</div></div>`;
+          }
+          function initTestimonialCarousel() {
+            const els = Array.from(testiList.querySelectorAll('.testimonial'));
+            els.forEach((el, i) => el.classList.toggle('hidden', i !== 0));
+            currentTestiIndex = 0;
+            if (testiInterval) clearInterval(testiInterval);
+            if (els.length > 1) {
+              testiInterval = setInterval(() => {
+                els[currentTestiIndex].classList.add('hidden');
+                currentTestiIndex = (currentTestiIndex + 1) % els.length;
+                els[currentTestiIndex].classList.remove('hidden');
+              }, 4000);
             }
-
-            let currentTestiIndex = 0; 
-            let testiInterval; 
-
-            function reinitializeTestimonialCarousel() {
-                const newTestiEls = document.querySelectorAll('#testi-list .testimonial');
-                if (newTestiEls.length === 0) {
-                    if (testiInterval) clearInterval(testiInterval);
-                    if (testiList) testiList.innerHTML = `<p class="text-gray-400">Nenhum depoimento disponível no momento.</p>`;
-                    return; 
-                }
-
-                if (testiInterval) {
-                    clearInterval(testiInterval);
-                }
-
-                currentTestiIndex = 0; 
-                newTestiEls.forEach((el, idx) => {
-                    if (idx !== currentTestiIndex) {
-                        el.classList.add('hidden'); 
-                    } else {
-                        el.classList.remove('hidden');
-                    }
-                });
-
-                if (newTestiEls.length > 1) { 
-                    testiInterval = setInterval(()=> {
-                        newTestiEls[currentTestiIndex].classList.add('hidden'); 
-                        currentTestiIndex = (currentTestiIndex + 1) % newTestiEls.length; 
-                        newTestiEls[currentTestiIndex].classList.remove('hidden'); 
-                    }, 4000);
-                }
+          }
+          async function loadTestimonials() {
+            try {
+              const resp = await fetch(testimonialsTextFile);
+              if (!resp.ok) throw new Error('Falha ao carregar depoimentos');
+              const text = await resp.text();
+              const rows = text.split('\n').map(l => l.trim()).filter(Boolean);
+              const parsed = rows.map(l => {
+                const parts = l.split('-');
+                return parts.length >= 2 ? { text: parts[0].trim(), author: parts[1].trim() } : null;
+              }).filter(Boolean);
+              testiList.innerHTML = parsed.map(renderTestimonial).join('');
+              if (!parsed.length) {
+                testiList.innerHTML = '<p class="text-gray-400">Nenhum depoimento disponível no momento.</p>';
+              }
+              initTestimonialCarousel();
+            } catch (e) {
+              console.error(e);
+              testiList.innerHTML = '<p class="text-red-400">Erro ao carregar os depoimentos. Tente novamente mais tarde.</p>';
             }
-
-            loadTestimonialsFromTextFile(); 
-
-        }); // Fim do DOMContentLoaded
-    </script>
-
-</body>
-</html>
+          }
+          loadTestimonials();
+        });
+      </script>
+    </body>
+    </html>
+                </div>
